@@ -41,6 +41,7 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 git clone https://github.com/your-repo/PowerGauge.git
 cd PowerGauge
 pip install -r requirements.txt
+
 ⚡ Running the Application
 bash
 Copy
