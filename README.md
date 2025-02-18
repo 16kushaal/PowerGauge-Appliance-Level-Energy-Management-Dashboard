@@ -48,6 +48,9 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 - Database: MySQL
 - Backend: Python
 
+## 🔷 Data Flow Diagram
+ ![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD%201.png)
+ DFD Level 0 (or Context Diagram), represents the system as a single process. Figure shows high-level inputs and outputs interacting with external entities. The primary external entity here is the User, who provides inputs such as Username and Password to access the system. The system, represented as a single process named Powergauge, processes this information and delivers outputs like Visualization and Analytics to the user. 
 ## 🛠 Installation  
 To install **PowerGauge**, run the following commands:  
 ```bash
