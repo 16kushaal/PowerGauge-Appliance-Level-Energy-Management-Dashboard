@@ -43,10 +43,10 @@ Predictive analytics for power optimization
 User-friendly interface for data visualization
 
 ## 🏗 Technologies Used
--Frontend: PyQt6
--Data Visualization: Matplotlib
--Database: MySQL
--Backend: Python
+- Frontend: PyQt6
+- Data Visualization: Matplotlib
+- Database: MySQL
+- Backend: Python
 
 ## 🛠 Installation  
 To install **PowerGauge**, run the following commands:  
