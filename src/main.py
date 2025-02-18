@@ -19,15 +19,27 @@ import os
 def create_connection():
     load_dotenv()
     try:
+        #database is hosted locally use the below creds
         host = os.getenv('db_host_local')
         user = os.getenv('db_user_local')
         password = os.getenv('db_password_local')
         database = os.getenv('db_name_local')
+
+        #port is same for both local and online
+        port = os.getenv('db_port')
+
+        #database is hosted online use the below creds
+        host_online = os.getenv('db_host_online')
+        user_online = os.getenv('db_user_online')
+        password_online = os.getenv('db_password_online')
+        database_online = os.getenv('db_name_online')
+
         db = mysql.connector.connect(
             host= host,
             user=user,
             password=password,
-            database=database
+            database=database,
+            port  = port
         )
         return db
     except mysql.connector.Error as err:
