@@ -13,7 +13,7 @@ from ui.Register import Ui_RegisterPage
 from resources.images.ui_rc import *
 import bcrypt # type: ignore
 import re
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 import os
 
 def create_connection():
