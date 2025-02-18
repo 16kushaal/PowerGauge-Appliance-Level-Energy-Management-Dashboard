@@ -37,23 +37,8 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 - Can be expanded into a **comprehensive energy management system**.  
 
 ## 🛠 Installation  
+To install **PowerGauge**, run the following commands:  
 ```bash
 git clone https://github.com/your-repo/PowerGauge.git
 cd PowerGauge
 pip install -r requirements.txt
-
-⚡ Running the Application
-bash
-Copy
-Edit
-python main.py
-🏗 Technologies Used
-Frontend: PyQt6
-Data Visualization: Matplotlib
-Database: MySQL
-Backend: Python
-🤝 Contributing
-Contributions are welcome! Open issues or submit PRs to improve PowerGauge.
-
-📜 License
-This project is licensed under the MIT License.
