@@ -61,7 +61,3 @@ After installation, run the following command to start the application:
 ```bash
 python main.py
 ```
-
-## Visuals and Diagrams
-![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD0.svg)
-
