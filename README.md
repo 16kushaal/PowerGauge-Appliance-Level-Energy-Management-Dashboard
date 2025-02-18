@@ -51,15 +51,21 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 ## 🔷 Data Flow Diagram
  ![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD0.png)
  DFD Level 0 (or Context Diagram), represents the system as a single process. Figure shows high-level inputs and outputs interacting with external entities. The primary external entity here is the User, who provides inputs such as Username and Password to access the system. The system, represented as a single process named Powergauge, processes this information and delivers outputs like Visualization and Analytics to the user. 
+
 ![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD%201.png)
 The Level 1 Data Flow Diagram (DFD), provides a detailed decomposition of the system into three primary subprocesses: Login, Device Management, and Visual Generations. These subprocesses illustrate how the system processes data and interacts with the user to achieve its objectives. The Login subprocess handles the authentication of users by validating their credentials. The user provides inputs such as username and password, and the system verifies them against stored data to grant access. This ensures secure access to the system while maintaining user-specific operations. The Device Management subprocess manages the interaction between users and their associated devices. It allows users to input, update, or query device-related data. The system processes and stores details about devices, enabling efficient tracking and management of user-specific devices. The Visual Generations subprocess focuses on creating visual outputs for the user. Based on the data from devices and user interactions, the system generates insights, analytics, or reports in a visually comprehensible format. 
+
 ![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD%202.1.png)
 The Login process is designed to authenticate existing users securely. The user provides their Username and Password, which are passed to the system for validation. The system verifies these credentials against the stored user data in the database. If the credentials match, access is granted, and the user is directed to the main system functionalities.
+
 ![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD%202.2.png)
 Provides a detailed breakdown of how energy consumption is monitored, managed, and mapped for efficient user 
 interaction. At the core of the system is the Device Initialization & Selection (Process 2.1), where users begin by registering their devices and selecting which ones to track. This step ensures that all relevant devices are appropriately configured within the system, forming the foundation for subsequent operations. Once the devices are initialized, the Usage Calculation (Process 2.2) process comes into play, where the system processes real-time data from connected meters and devices to compute energy consumption metrics. This process provides critical insights into energy usage patterns, allowing users to make informed decisions about their energy consumption behavior. 
+
 ![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD%202.3.png)
-This Level 3 Data Flow Diagram (DFD) expands upon the processes related to the visualization and usage monitoring aspects of the system as shown . At its core, the diagram highlights three interrelated processes aimed at providing detailed insights and an intuitive user experience. 
+This Level 3 Data Flow Diagram (DFD) expands upon the processes related to the visualization and usage monitoring aspects of the system as shown . At its core, the diagram highlights three interrelated processes 
+aimed at providing detailed insights and an intuitive user experience. 
+
 ## 🛠 Installation  
 To install **PowerGauge**, run the following commands:  
 ```bash
