@@ -37,10 +37,10 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 - Can be expanded into a **comprehensive energy management system**.  
 
 ## 📌 Features
-Real-time appliance-level energy monitoring
-Interactive dashboard for energy consumption analysis
-Predictive analytics for power optimization
-User-friendly interface for data visualization
+- Real-time appliance-level energy monitoring
+- Interactive dashboard for energy consumption analysis
+- Predictive analytics for power optimization
+- User-friendly interface for data visualization
 
 ## 🏗 Technologies Used
 - Frontend: PyQt6
