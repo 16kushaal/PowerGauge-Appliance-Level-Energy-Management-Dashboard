@@ -36,9 +36,30 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 - Suitable for **households, businesses, and industries**.  
 - Can be expanded into a **comprehensive energy management system**.  
 
+## 📌 Features
+Real-time appliance-level energy monitoring
+Interactive dashboard for energy consumption analysis
+Predictive analytics for power optimization
+User-friendly interface for data visualization
+
+## 🏗 Technologies Used
+Frontend: PyQt6
+Data Visualization: Matplotlib
+Database: MySQL
+Backend: Python
+
 ## 🛠 Installation  
 To install **PowerGauge**, run the following commands:  
 ```bash
-git clone https://github.com/your-repo/PowerGauge.git
+git clone https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard
 cd PowerGauge
 pip install -r requirements.txt
+```
+
+## ⚡ Running the Application
+After installation, run the following command to start the application:
+```bash
+python main.py
+```
+
+
