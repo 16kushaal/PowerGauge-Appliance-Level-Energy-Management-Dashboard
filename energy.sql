@@ -116,7 +116,7 @@ CREATE TABLE `meter` (
 
 LOCK TABLES `meter` WRITE;
 /*!40000 ALTER TABLE `meter` DISABLE KEYS */;
-INSERT INTO `meter` VALUES (1,'Home','Eskişehir'),(2,'Business','Ankara'),(3,'Home','İzmir'),(4,'Business','İzmir'),(5,'Home','Ankara'),(6,'Home','Ankara');
+INSERT INTO `meter` VALUES (1,'Home','Mysuru'),(2,'Business','Bengaluru'),(3,'Home','Tumakuru'),(4,'Business','Tumakuru'),(5,'Home','Bengaluru'),(6,'Home','Bengaluru');
 /*!40000 ALTER TABLE `meter` ENABLE KEYS */;
 UNLOCK TABLES;
 
