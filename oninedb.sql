@@ -364,7 +364,7 @@ CREATE TABLE `usersdevices` (
   CONSTRAINT `MeterNoo` FOREIGN KEY (`MeterID`) REFERENCES `meter` (`meterID`),
   CONSTRAINT `UserNO` FOREIGN KEY (`UserID`) REFERENCES `users` (`ID`)
 );
-INSERT INTO usersdevice (UserID, DeviceID, MeterID) VALUES
+INSERT INTO usersdevices (UserID, DeviceID, MeterID) VALUES
 (18, 3, 1),
 (18, 4, 1),
 (18, 7, 1),
