@@ -78,3 +78,28 @@ After installation, run the following command to start the application:
 ```bash
 python src\main.py
 ```
+
+## PowerGauge-Appliance-Level-Energy-Management-Dashboard
+├── 📂 db/                         # Database-related files
+│   ├── 📄 online_db.sql           # SQL schema for online database setup
+│   └── 📄 energy.sql              # Data to populate the local database
+│
+├── 📂 images                      # Image assets for project(Data Flow Diagrams)
+│
+├── 📂 src/                        # Source code for the application
+│   ├── 📂 helpers/                # Backend logic and API
+│   │   ├── 📄 DatabaseHelper.py    # DB Helper
+│   │   ├── 📄 GraphHelper.py       # Visuals generator and helper
+│   │   ├── 📄 UIHelper.py          # User Interface Helper
+│   │
+│   ├── 📂 resources/               # Frontend application
+│   │   ├── 📂 images              # Project Logo and image dependencies
+│   │   ├── 📂 ui                  # Dashboard UI components
+│   │
+│   └── 📄 main.py                  # Main running file
+│   └── 📄 prophet_model.py         # Energy Predicition model
+│
+├── 📄 .gitignore                  # Git ignore file
+├── 📄 README.md                   # Project documentation
+└── 📄 requirements.txt            # Python dependencies
+
