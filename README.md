@@ -80,6 +80,7 @@ python src\main.py
 ```
 
 ## PowerGauge-Appliance-Level-Energy-Management-Dashboard
+```bash
 ├── 📂 db/                         # Database-related files
 │   ├── 📄 online_db.sql           # SQL schema for online database setup
 │   └── 📄 energy.sql              # Data to populate the local database
@@ -102,4 +103,4 @@ python src\main.py
 ├── 📄 .gitignore                  # Git ignore file
 ├── 📄 README.md                   # Project documentation
 └── 📄 requirements.txt            # Python dependencies
-
+```
