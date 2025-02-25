@@ -14,7 +14,8 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 ## 🚀 Features  
 ### ✅ Appliance-Specific Insights  
 - Identify high-energy-consuming appliances.  
-- Optimize usage to lower electricity costs.  
+- Optimize usage to lower electricity costs.
+- Daily energy predcition from past data.
 
 ### 📊 Interactive Dashboard  
 - Built using **PyQt6** for seamless user experience.  
@@ -32,9 +33,6 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 - Helps users **reduce carbon footprints** and energy costs.  
 - Supports **India’s national sustainability** goals.  
 
-### 🏢 Use Cases  
-- Suitable for **households, businesses, and industries**.  
-- Can be expanded into a **comprehensive energy management system**.  
 
 ## 📌 Features
 - Real-time appliance-level energy monitoring
@@ -47,6 +45,7 @@ In the face of increasing energy demand and climate change concerns, **PowerGaug
 - Data Visualization: Matplotlib
 - Database: MySQL
 - Backend: Python
+- Predictions: Prophet
 
 ## 🔷 Data Flow Diagram
  ![](https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Management-Dashboard/blob/master/images/DFD0.png)
