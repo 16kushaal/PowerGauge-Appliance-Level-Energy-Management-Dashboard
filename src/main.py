@@ -15,6 +15,7 @@ import bcrypt # type: ignore
 import re
 from dotenv import load_dotenv # type: ignore
 import os
+from prophet_model import predict_next_day_usage
 
 def create_connection():
     load_dotenv()
@@ -35,10 +36,10 @@ def create_connection():
         database_online = os.getenv('db_name_online')
 
         db = mysql.connector.connect(
-            host= host_online,
-            user=user_online,
-            password=password_online,
-            database=database_online,
+            host= host,
+            user=user,
+            password=password,
+            database=database,
             port  = port
         )
         return db
@@ -399,14 +400,6 @@ class Main(QtWidgets.QMainWindow):
         self.ui.inputUpdateUsername_ConfirmUsername.returnPressed.connect(self.update_username)
         self.ui.inputRemoveAccount_VerifyPassword.returnPressed.connect(self.remove_account)
     
-    # def handle_logout(self):
-    #         """Handle the logout action"""
-    #         # Close the current window
-    #         self.close()
-    #         # Create and show the login window with the existing database connection
-    #     # self.login = Login(self.db)  # Use the existing db connection
-    #     self.login.show()
-
     def get_user_id(self):
         result = self.db_helper.fetch_one("SELECT ID FROM users WHERE UserName = %s", (self.username,))
         return result[0] if result else None
@@ -828,23 +821,28 @@ class Main(QtWidgets.QMainWindow):
         usage_amounts = [item[1] for item in data]
         GraphHelper(self.ui.graphicsDailyEnergyOverview).draw_graph(dates, usage_amounts, graph_type, 'dailyEnergyOverview')
 
-        # Calculate the next day prediction
-        query = """
-            SELECT AVG(usageAmount)
-            FROM (
-                SELECT SUM(usages.usageAmount * devicedetails.`PowerConsumption (per Hour)`) as usageAmount
-                FROM usages 
-                JOIN devicedetails ON usages.deviceID = devicedetails.DeviceID
-                WHERE usages.userID = %s AND usages.meterID = %s AND DAYOFWEEK(usages.date) = DAYOFWEEK(CURDATE())
-                GROUP BY DATE(usages.date)
-            ) as subquery
-        """
-        prediction = self.db_helper.fetch_one(query, (self.userID, selected_meter_id))[0]
-        # Check if the prediction is None
+        prediction, error_message = predict_next_day_usage(self.userID, selected_meter_id)    
         if prediction is None:
-            self.ui.labelDailyEnergyOverviewPrediction.setText("No usage data available for prediction.")
+            self.ui.labelDailyEnergyOverviewPrediction.setText(error_message or "No usage data available for prediction.")
         else:
-            self.ui.labelDailyEnergyOverviewPrediction.setText(f"Next Day Prediction: {prediction:.2f}")
+            self.ui.labelDailyEnergyOverviewPrediction.setText(f"Next Day Prediction: {prediction:.2f} kWh")
+            # # Calculate the next day prediction
+        # query = """
+        #     SELECT AVG(usageAmount)
+        #     FROM (
+        #         SELECT SUM(usages.usageAmount * devicedetails.`PowerConsumption (per Hour)`) as usageAmount
+        #         FROM usages 
+        #         JOIN devicedetails ON usages.deviceID = devicedetails.DeviceID
+        #         WHERE usages.userID = %s AND usages.meterID = %s AND DAYOFWEEK(usages.date) = DAYOFWEEK(CURDATE())
+        #         GROUP BY DATE(usages.date)
+        #     ) as subquery
+        # """
+        # prediction = self.db_helper.fetch_one(query, (self.userID, selected_meter_id))[0]
+        # # Check if the prediction is None
+        # if prediction is None:
+        #     self.ui.labelDailyEnergyOverviewPrediction.setText("No usage data available for prediction.")
+        # else:
+        #     self.ui.labelDailyEnergyOverviewPrediction.setText(f"Next Day Prediction: {prediction:.2f}")
     
     def draw_monthly_energy_overview(self):
         selected_meter_id = self.ui.comboMonthlyEnergyOverview_Meter.currentText()
