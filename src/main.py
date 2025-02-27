@@ -36,10 +36,10 @@ def create_connection():
         database_online = os.getenv('db_name_online')
 
         db = mysql.connector.connect(
-            host= host,
-            user=user,
-            password=password,
-            database=database,
+            host= host_online,
+            user=user_online,
+            password=password_online,
+            database=database_online,
             port  = port
         )
         return db
