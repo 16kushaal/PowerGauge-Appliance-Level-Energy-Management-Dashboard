@@ -7,7 +7,7 @@ class Ui_LoginPage(object):
         LoginPage.setEnabled(True)
         LoginPage.resize(444, 548)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\\V\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         LoginPage.setWindowIcon(icon)
         LoginPage.setAutoFillBackground(False)
         LoginPage.setStyleSheet("* {\n"
@@ -67,7 +67,7 @@ class Ui_LoginPage(object):
         self.labelLogo = QtWidgets.QLabel(parent=self.widgetHeader)
         self.labelLogo.setMaximumSize(QtCore.QSize(200, 200))
         self.labelLogo.setText("")
-        self.labelLogo.setPixmap(QtGui.QPixmap("D:\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"))
+        self.labelLogo.setPixmap(QtGui.QPixmap("D:\\V\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"))
         self.labelLogo.setScaledContents(True)
         self.labelLogo.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelLogo.setObjectName("labelLogo")

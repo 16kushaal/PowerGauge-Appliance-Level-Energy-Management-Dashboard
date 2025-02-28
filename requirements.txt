@@ -16,3 +16,4 @@ six==1.16.0
 bcrypt==4.2.1
 pandas
 prophet
+dotenv

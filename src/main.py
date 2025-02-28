@@ -14,8 +14,8 @@ from resources.images.ui_rc import *
 import bcrypt # type: ignore
 import re
 from dotenv import load_dotenv # type: ignore
-import os
 from prophet_model import predict_next_day_usage
+import os
 
 def create_connection():
     load_dotenv()

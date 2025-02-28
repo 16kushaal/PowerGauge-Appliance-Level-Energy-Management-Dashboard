@@ -6,7 +6,7 @@ class Ui_MainPage(object):
         MainPage.setObjectName("MainPage")
         MainPage.resize(1070, 849)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("D:\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\\V\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         MainPage.setWindowIcon(icon)
         MainPage.setStyleSheet("* {\n"
 "background-color: #111010;\n"
@@ -220,7 +220,7 @@ class Ui_MainPage(object):
         self.labelLogo = QtWidgets.QLabel(parent=self.widgetHeader)
         self.labelLogo.setMaximumSize(QtCore.QSize(50, 50))
         self.labelLogo.setText("")
-        self.labelLogo.setPixmap(QtGui.QPixmap("D:\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"))
+        self.labelLogo.setPixmap(QtGui.QPixmap("D:\\V\\PowerGauge\\src\\resources\\images\\powerwatch_logo.svg"))
         self.labelLogo.setScaledContents(True)
         self.labelLogo.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.labelLogo.setObjectName("labelLogo")
