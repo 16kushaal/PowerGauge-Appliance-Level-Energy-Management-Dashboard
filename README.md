@@ -72,8 +72,14 @@ git clone https://github.com/16kushaal/PowerGauge-Appliance-Level-Energy-Managem
 cd PowerGauge
 pip install -r requirements.txt
 ```
+## Setup Database
+Run mysql shell, log in and create a database 'energy'. Run the below command and change the file path as required.
+```bash
+SOURCE /path/to/your/energy.sql;
+```
 
 ## ⚡ Running the Application
+Make sure to change the username,password and host in main.py. 
 After installation, run the following command to start the application:
 ```bash
 python src\main.py
