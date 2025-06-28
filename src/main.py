@@ -19,6 +19,7 @@ import os
 
 def create_connection():
     load_dotenv()
+    print("[DEBUG] Starting database connection...")
     try:
         #database is hosted locally use the below creds
         host = os.getenv('db_host_local')
@@ -35,16 +36,26 @@ def create_connection():
         password_online = os.getenv('db_password_online')
         database_online = os.getenv('db_name_online')
 
+        print(f"[DEBUG] Attempting to connect to database with hardcoded credentials:")
+        print(f"[DEBUG] Host: localhost")
+        print(f"[DEBUG] User: root")
+        print(f"[DEBUG] Database: energy")
+        print(f"[DEBUG] Port: 3306")
+
         db = mysql.connector.connect(
-            host= host_online,
-            user=user_online,
-            password=password_online,
-            database=database_online,
-            port  = port
+            host= "localhost",
+            user="root",
+            password="delllatitude7480",
+            database="energy",
+            port  = 3306
         )
+        print("[DEBUG] Database connection established successfully.")
         return db
     except mysql.connector.Error as err:
-        print(err)
+        print(f"[ERROR] Database connection failed: {err}")
+        return None
+    except Exception as e:
+        print(f"[ERROR] Unexpected error during database connection: {e}")
         return None
 
 class Login(QtWidgets.QMainWindow):
@@ -1172,9 +1183,22 @@ class AdminPanel(QtWidgets.QMainWindow):
 
 if __name__ == "__main__":
     import sys
+    print("[DEBUG] Starting application...")
     app = QtWidgets.QApplication(sys.argv)
+    print("[DEBUG] QApplication created successfully")
+    
+    print("[DEBUG] Attempting to create database connection...")
     if not create_connection():
+        print("[ERROR] Database connection failed, exiting...")
         sys.exit(-1)
+    print("[DEBUG] Database connection successful")
+    
+    print("[DEBUG] Creating Login window...")
     login = Login()
+    print("[DEBUG] Login window created")
+    
+    print("[DEBUG] Showing Login window...")
     login.show()
+    print("[DEBUG] Login window shown, starting event loop...")
+    
     sys.exit(app.exec())
